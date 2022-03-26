@@ -18,7 +18,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 function news(){
 newsapi.v2.everything({
-    q: 'Labour Party',
+    q: 'Labour Party AND NOT mlb AND NOT Malta',
     sources: 'bbc-news,',
   }).then(response => {
     console.log(response);
