@@ -32,7 +32,7 @@ newsapi.v2.everything({
   });
 }
 
-  const gptCompletion = await openai.createCompletion('text-davinci-001', {
+  const gptCompletion = openai.createCompletion('text-davinci-001', {
     prompt: `is this article positive or negative: ${news}`,
     temperature: 0.7,
     max_tokens: 32,
