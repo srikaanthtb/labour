@@ -17,11 +17,9 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 function news(){
-newsapi.v2.topHeadlines({
-    sources: 'bbc-news',
-    q: 'Labour',
-    category: 'politics',
-    language: 'en',
+newsapi.v2.everything({
+    q: 'Labour Party',
+    sources: 'bbc-news,',
   }).then(response => {
     console.log(response);
     return response;
@@ -42,3 +40,5 @@ newsapi.v2.topHeadlines({
     frequency_penalty: 0,
     presence_penalty: 0,
   });
+
+  const sentiment = gptCompletion.data
