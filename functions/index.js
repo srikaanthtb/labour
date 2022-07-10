@@ -42,3 +42,5 @@ newsapi.v2.everything({
   });
 
   const sentiment = gptCompletion.data
+
+  console.log(sentiment);
